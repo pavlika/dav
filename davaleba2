@@ -1,0 +1,61 @@
+public class davaleba2 
+{
+    public static void main(String[] argh) 
+    {
+        String[] class1 = {"გიორგი", "ბექა", "მანანა", "მამუკა", "ნინო", "გოჩა", "ნატო"};
+        String[] class2 = {"ნოდარი", "მარიამი", "გიორგი", "ლანა", "გუგა", "რატი", "ნაზი", "ჯონ", "გიორგი", "ლელა", "ლევანი"};
+        String[] class3 = new String[class1.length + class2.length];
+        String[] class4 = new String[class3.length];
+        int j =0;
+        for (int i = 0; i < class4.length; i++)
+        {
+            if (i <class2.length)
+            {
+                class4[i] = class2[i];
+            }else if (j < class1.length)
+            {
+                class4[i] = class1[j];
+                j++;
+            }
+           // System.out.println(class4[i]);
+        }
+        gameoreba(class4, class3);
+        for (int i = 0; i < class3.length; i++) 
+        {
+            System.out.println(class3[i]);
+       }
+
+    }
+
+    public static void gameoreba(String[] class2, String[] class3) 
+    {
+        int j = 0, k = 0;
+        for (int i = 0; i < class2.length; i++) 
+        {
+            if (class2[i].equals(class2[j])) 
+            {
+                k++;
+                if (k == 1) 
+                {
+                    class3[i] = class2[i];
+                } else if (k == 2) 
+                {
+                    continue;
+                }
+            }
+            if (j == 1) 
+            {
+                class3[j] = class2[j];
+            }
+            if (i + 1 == class2.length) 
+            {
+                j++;
+                i = k = 0;
+            }
+            if (j == class2.length) 
+            {
+                break;
+            }
+        }
+    }
+}
