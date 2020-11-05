@@ -1,0 +1,61 @@
+import java.util.ArrayList;
+import java.util.List;
+public class bank 
+{
+
+    private String bank;
+    private String branch;
+
+    public void setbank(String bank)
+    {
+    this.bank = bank;
+    }
+    public void setbranch(String branch)
+    {
+    this.branch = branch;
+    }
+
+    public String getbank() 
+    {
+    return bank;
+    }
+    public String getbranch() 
+    {
+    return branch;
+    }
+
+    public bank(String bank, String branch) 
+    {
+        bank = bank;
+        branch = branch;
+    }
+
+    public String toString() 
+    {
+    return "bank name is: " + bank + " , branch is: " + branch;
+    }
+    public static void main(String[] args) 
+    {
+        List<String> banks = new ArrayList<>();
+        banks.add("თიბისი ბანკი");
+        banks.add("საქართველოს ბანკი");
+        banks.add("ლიბერთი ბანკი");
+
+        List<String> branch = new ArrayList<>();
+        branch.add("ჩუღურეთის ფილიალი");
+        branch.add("საბურთალოს ფილიალი");
+        branch.add("დიღმის ფილიალი");
+        for (String bank : banks) 
+        {
+            System.out.println(bank);
+        }
+
+        System.out.println();
+
+        for (String branch : branch)
+        {
+            System.out.println(branch);
+        }
+    }
+
+}
